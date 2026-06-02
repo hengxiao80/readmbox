@@ -1,0 +1,13 @@
+[project]
+name = "readmbox"
+version = "0.1.0"
+description = "Search and export messages from large .mbox files"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.0",
+    "tqdm>=4.0",
+]
+
+[project.scripts]
+readmbox = "readmbox.cli:cli"
