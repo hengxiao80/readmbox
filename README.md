@@ -6,11 +6,27 @@ Search and export messages from large `.mbox` files. Handles files up to 15 GB b
 
 Requires Python 3.13+ and [uv](https://github.com/astral-sh/uv).
 
+The default Python version is 3.14, as specified in `.python-version`.
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/readmbox.git
 cd readmbox
+uv venv --python 3.14
 uv pip install -e .
 ```
+
+### Using Python 3.13
+
+On a machine with Python 3.13 installed, run these commands after cloning the repository:
+
+```bash
+cd readmbox
+uv python pin 3.13
+uv sync
+uv run readmbox --help
+```
+
+`uv python pin 3.13` updates `.python-version` in that checkout so subsequent `uv run` commands use Python 3.13. `uv sync` creates the virtual environment and installs the package and its dependencies. You can then use the commands below.
 
 ## Usage
 
